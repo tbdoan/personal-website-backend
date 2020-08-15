@@ -20,7 +20,7 @@ app.get('/', async (req, res) => {
     }
 })
 //Connect to DB
-mongoose.connect(process.env.DB_CONNECTION,
+mongoose.connect('mongodb+srv://tungdoan:wowzer2000@cluster0.tnt3l.mongodb.net/my-website?retryWrites=true&w=majority', //process.env.DB_CONNECTION
     { useUnifiedTopology: true, useNewUrlParser: true },
     () => {
         console.log('Connected to DB')
