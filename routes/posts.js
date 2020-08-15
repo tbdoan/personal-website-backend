@@ -6,8 +6,7 @@ const Post = require('../models/Post');
 router.get('/', async (req, res) => {
     try {
         const posts = await Post.find();
-        res.send('posts');
-        //res.json(posts);
+        res.json(posts);
     } catch (err) {
         res.status(500).json({ message: err });
     }
