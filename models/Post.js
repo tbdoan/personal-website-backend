@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const now = new Date();
+
 const PostSchema = mongoose.Schema({
     title: {
         type: String,
@@ -15,7 +17,7 @@ const PostSchema = mongoose.Schema({
     },
     date: {
         type: Date,
-        default: Date.now,
+        default: now.toLocaleDateString("en-US"),
     }
 })
 
